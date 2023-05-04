@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bill Spill</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&family=Lobster&family=Poppins:ital,wght@0,100;0,300;0,400;1,300&family=Roboto:wght@100&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Bill Spill</h1>
+        <div class="sub-container">
+            <div id="left-part">
+
+                <label>Bill</label><br>
+                <input type="text" placeholder="₹ 0" id="bill-input" oninput="calculator()"><br>
+
+                <label>Select Tip %</label><br>
+                <button class="tip-btn" onclick="calculator(5)" >5%</button>
+                <button class="tip-btn" onclick="calculator(10)">10%</button>
+                <button class="tip-btn" onclick="calculator(15)">15%</button><br>
+                <button class="tip-btn" onclick="calculator(25)">25%</button>
+                <button class="tip-btn" onclick="calculator(50)">50%</button>
+                <button class="tip-btn" onclick="calculator(75)">75%</button><br>
+
+                <label >Number of People</label><br>
+                <input type="number" placeholder="₹ 0" id="people-input" value="1" oninput="calculator()"><br>
+            </div>
+
+            <div id="right-part">
+                <div id="amount-part">
+                    <div>
+                    <div class="iner-label">Tip Amount</div>
+                    <div> / person</div>
+                    </div>
+                    <div id="tip-person">₹ 0.00</div>
+                </div>
+
+                <div id="total-part">
+                    <div>
+                    <div class="iner-label">Total</div>
+                    <div> / person</div>
+                    </div>
+                    <div id="total-amount">₹ 0.00</div>
+                </div>
+                <button id="reset" onclick="reset()">Reset</button>
+            </div>
+        </div>
+    </div>
+    <script src="./index.js"></script>
+</body>
+</html>
